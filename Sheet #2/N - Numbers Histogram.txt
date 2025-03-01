@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void SignPrinter(int Times, char Sign)
+{
+    int N;
+    for (int i = 1; i <= Times; i++)
+    {
+        cin >> N;
+        for (int i = 1; i <= N; i++)
+        {
+            cout << Sign;
+        }
+        cout << "\n";
+    }
+}
+
+int main()
+{
+    int RepeatTimes;
+    char Sign;
+    cin >> Sign >> RepeatTimes;
+
+    SignPrinter(RepeatTimes, Sign);
+
+    return 0;
+}

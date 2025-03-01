@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int MinNumber(int Number1, int Number2)
+{
+    if (Number1 > Number2)
+    {
+        return Number2;
+    }
+    else if (Number1 < Number2)
+    {
+        return Number1;
+    }
+    else
+        return Number2;
+}
+
+int GCD(int Number1, int Number2)
+{
+    int GCD = 0;
+    int Min = MinNumber(Number1, Number2);
+
+    for (int i = 1; i <= Min; i++)
+    {
+        if (Number1 % i == 0 && Number2 % i == 0)
+        {
+            if (i > GCD)
+            {
+                GCD = i;
+            }
+        }
+    }
+    return GCD;
+}
+
+int main()
+{
+    int Number1, Number2;
+    cin >> Number1 >> Number2;
+
+    cout << GCD(Number1, Number2);
+
+    return 0;
+}

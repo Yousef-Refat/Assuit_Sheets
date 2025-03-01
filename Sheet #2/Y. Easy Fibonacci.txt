@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+void PrintFibonacciSeries(int Number)
+{
+    int FibNumber[45] = {0,1,1};
+    for (int i = 3; i <= 45; i++)
+    {
+        FibNumber[i] = FibNumber[i-2] + FibNumber[i-1];
+    }
+
+    for (int i = 1; i <= Number; i++)
+    {
+        cout << FibNumber[i-1] << " ";
+    }
+}
+
+int main()
+{
+    int Number;
+    cin >> Number;
+
+    PrintFibonacciSeries(Number);
+
+    return 0;
+}

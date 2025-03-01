@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+bool CheckPrime(int Number)
+{
+    if (Number == 1)
+    {
+        return 0;
+    }
+
+    int HalfNumber = round(Number / 2);
+
+    for (int Counter = 2; Counter <= HalfNumber; Counter++)
+    {
+        if (Number % Counter == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+void PrimeFrom1ToN(int Number)
+{
+    for (int i = 1; i <= Number; i++)
+    {
+        if (CheckPrime(i))
+        {
+            cout << i << " ";
+        }
+    }
+}
+
+int main()
+{
+    int Number;
+    cin >> Number;
+
+    PrimeFrom1ToN(Number);
+
+    return 0;
+}

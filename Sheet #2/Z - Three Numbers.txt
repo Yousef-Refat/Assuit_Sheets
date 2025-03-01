@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Max, Sum, Counter = 0;
+    cin >> Max >> Sum;
+
+    // k ----> Max
+    //  s ----> Sum
+
+    for (int i = 0; i <= Max; i++)
+    {
+        for (int j = 0; j <= Max; j++)
+        {
+            if (Sum - i - j >= 0 && Sum - i - j <= Max)
+            {
+                Counter++;
+            }
+        }
+    }
+
+cout <<Counter;
+
+    return 0;
+}

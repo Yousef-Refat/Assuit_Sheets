@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+void KindCounter(int N)
+{
+    int EvenCounter = 0, OddCounter = 0, PositiveCounter = 0, NegativeCounter = 0, Num;
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> Num;
+
+        if (Num % 2 == 0)
+        {
+            EvenCounter++;
+        }
+
+        if (Num % 2 != 0)
+        {
+            OddCounter++;
+        }
+
+        if (Num < 0)
+        {
+            NegativeCounter++;
+        }
+
+        if (Num > 0)
+        {
+            PositiveCounter++;
+        }
+    }
+
+    cout << "Even: " << EvenCounter << endl;
+    cout << "Odd: " << OddCounter << endl;
+    cout << "Positive: " << PositiveCounter << endl;
+    cout << "Negative: " << NegativeCounter;
+}
+
+int main()
+{
+    int N;
+    cin >> N;
+
+    KindCounter(N);
+
+    return 0;
+}

@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+bool Check(long long Number)
+{
+    int Remainder = 0;
+
+    while (Number > 0)
+    {
+        Remainder = Number % 10;
+        Number = floor(Number / 10);
+
+        if (!(Remainder == 4 || Remainder == 7))
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+void LuckyNumbers(int Number1, int Number2)
+{
+    bool Lucky = 0;
+    
+    for (long long i = Number1; i <= Number2; i++)
+    {
+        if (Check(i))
+        {
+            Lucky = 1;
+            cout << i << " ";
+        }
+    }
+
+    if (!Lucky)
+    {
+        cout << -1;
+    }
+}
+
+int main()
+{
+    int Number1, Number2;
+    cin >> Number1 >> Number2;
+
+    LuckyNumbers(Number1, Number2);
+
+    return 0;
+}

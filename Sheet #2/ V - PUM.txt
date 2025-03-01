@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void PUM(int Number)
+{
+    for (int i = 1; i <= Number * 4; i++)
+    {
+        if (i % 4 == 0)
+        {
+            cout << "PUM\n";
+            continue;
+        }
+        cout << i << " ";
+    }
+}
+
+int main()
+{
+    int N;
+    cin >> N;
+
+    PUM(N);
+
+    return 0;
+}

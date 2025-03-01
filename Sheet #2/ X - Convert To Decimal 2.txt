@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int CountOnes(int Decimal1)
+{
+    int Counter = 0;
+    while (Decimal1 > 0)
+    {
+        if (Decimal1 % 2 == 1)
+        {
+            Counter++;
+        }
+        Decimal1 /= 2;
+    }
+    return Counter;
+}
+
+int ConvertBinaryOnesInDecimal1ToDecimal2(int Decimal1)
+{
+    int Counter = CountOnes(Decimal1);
+    int Decimal2 = 0;
+
+    for (int i = 0; i <= Counter - 1; i++)
+    {
+        Decimal2 += pow(2, i);
+    }
+    return Decimal2;
+}
+
+int main()
+{
+    int Times, Decimal1;
+    cin >> Times;
+
+    for (int i = 1; i <= Times; i++)
+    {
+        cin >> Decimal1;
+        cout << ConvertBinaryOnesInDecimal1ToDecimal2(Decimal1);
+        cout << endl;
+    }
+
+    return 0;
+}

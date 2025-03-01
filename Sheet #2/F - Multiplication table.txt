@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+void MultiplicationTable(int X)
+{
+    for (int i = 1; i <= 12; i++)
+    {
+        cout << X << " * " << i << " = " << X * i << endl;
+    }
+}
+
+int main()
+{
+    int X;
+    cin >> X;
+
+    MultiplicationTable(X);
+
+    return 0;
+}

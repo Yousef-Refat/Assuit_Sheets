@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void PrintNumberReversed(long long Number)
+{
+    if (Number == 0)
+    {
+        cout << 0;
+    }
+
+    long long Remainder = 0;
+
+    while (Number > 0)
+    {
+        Remainder = Number % 10;
+        Number = floor(Number / 10);
+        cout << Remainder << " ";
+    }
+}
+
+int main()
+{
+    long long Number, Times;
+    cin >> Times;
+
+    for (int i = 1; i <= Times; i++)
+    {
+        cin >> Number;
+        PrintNumberReversed(Number);
+        cout << "\n";
+    }
+
+    return 0;
+}

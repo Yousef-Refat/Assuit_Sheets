@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+long long Factorial(int N)
+{
+    long long Result = 1;
+
+    for (int i = 1; i <= N; i++)
+    {
+        Result *= i;
+    }
+
+    return Result;
+}
+
+void Factorials(int TestCases)
+{
+    int N;
+    for (int i = 1; i <= TestCases; i++)
+    {
+        cin >> N;
+        cout << Factorial(N) << endl;
+    }
+}
+
+int main()
+{
+    int TestCases;
+    cin >> TestCases;
+
+    Factorials(TestCases);
+
+    return 0;
+}

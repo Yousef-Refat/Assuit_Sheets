@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void Divisors(int Number)
+{
+    cout << "1\n";
+    for (int i = 2; i <= round(Number / 2); i++)
+    {
+        if (Number % i == 0)
+        {
+            cout << i << "\n";
+        }
+    }
+    cout << Number;
+}
+
+int main()
+{
+    int Number;
+    cin >> Number;
+
+    Divisors(Number);
+
+    return 0;
+}
