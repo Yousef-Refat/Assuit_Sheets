@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int MaxNumber(int Number1, int Number2, int Number3)
+{
+
+    int Arr[3] = {Number1, Number2, Number3};
+    int MaxNumber = Arr[0];
+    for (int i = 0; i <= 2; i++)
+    {
+        if (Arr[i] > MaxNumber)
+        {
+            MaxNumber = Arr[i];
+        }
+    }
+    return MaxNumber;
+}
+
+int MinNumber(int Number1, int Number2, int Number3)
+{
+    int Arr[3] = {Number1, Number2, Number3};
+    int MinNumber = Arr[0];
+    for (int i = 0; i <= 2; i++)
+    {
+        if (Arr[i] < MinNumber)
+        {
+            MinNumber = Arr[i];
+        }
+    }
+    return MinNumber;
+}
+
+int main()
+{
+    int Num1, Num2, Num3;
+    cin >> Num1 >> Num2 >> Num3;
+    cout << MinNumber(Num1, Num2, Num3) << " " << MaxNumber(Num1, Num2, Num3);
+
+    return 0;
+}

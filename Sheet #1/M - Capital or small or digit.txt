@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cctype>
+
+using namespace std;
+
+int main()
+{
+    char Ch;
+    cin >> Ch;
+
+    if (islower(Ch))
+    {
+        cout << "ALPHA\nIS SMALL";
+    }
+    else if (isupper(Ch))
+    {
+        cout << "ALPHA\nIS CAPITAL";
+    }
+    else if (Ch >= '0' && Ch <= '9')
+    {
+        cout << "IS DIGIT";
+    }
+    else
+    {
+        cout << "Eroooor";
+    }
+
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    float Num1, Num2;
+    cin >> Num1>> Num2;
+
+    if (Num1 >= Num2)
+    {
+        cout << "Yes";
+    }
+    else
+    {
+        cout << "No";
+    }
+
+    return 0;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cctype>
+
+using namespace std;
+
+int main()
+{
+    char Ch;
+    int Num1, Num2, Result;
+
+    cin >> Num1 >> Ch >> Num2;
+
+    switch (Ch)
+    {
+    case '*':
+        Result = Num1 * Num2;
+        cout << Result;
+        break;
+    case '/':
+        Result = Num1 / Num2;
+        cout << Result;
+        break;
+    case '+':
+        Result = Num1 + Num2;
+        cout << Result;
+        break;
+    case '-':
+        Result = Num1 - Num2;
+        cout << Result;
+        break;
+    default:
+        cout << "Erooor";
+        break;
+    }
+
+    return 0;
+}

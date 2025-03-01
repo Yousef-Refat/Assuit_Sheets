@@ -1,0 +1,18 @@
+    #include <iostream>
+     
+    using namespace std;
+     
+    long long SumFrom1toN(long long Number)
+    {
+        return Number * (Number + 1) / 2;
+    }
+     
+    int main()
+    {
+        long long Num;
+        cin >> Num;
+     
+        cout << SumFrom1toN(Num);
+     
+        return 0;
+    }

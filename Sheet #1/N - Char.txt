@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cctype>
+
+using namespace std;
+
+char InvertChar(char X)
+{
+    if (islower(X))
+    {
+        return toupper(X);
+    }
+    else if (isupper(X))
+    {
+        return tolower(X);
+    }
+    else
+    {
+        return X;
+    }
+}
+
+int main()
+{
+    char Ch;
+    cin >> Ch;
+
+    cout << InvertChar(Ch);
+
+    return 0;
+}

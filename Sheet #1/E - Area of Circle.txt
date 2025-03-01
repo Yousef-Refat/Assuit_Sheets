@@ -1,0 +1,15 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double R;
+    double P = 3.141592653;
+    cin >> R;
+    double Area = ((R * R) * P);
+    cout << fixed << setprecision(9) << Area;
+    cin.get();
+    return 0;
+}

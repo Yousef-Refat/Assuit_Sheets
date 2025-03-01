@@ -1,0 +1,48 @@
+ #include <iostream>
+    #include <string>
+    #include <limits>
+    #include <iomanip>
+     
+    using namespace std;
+     
+    string ReadString(bool IgnoreEnterPress = 0, bool FirstInLoop = 0)
+    {
+        string St;
+        // cout << Message;
+        if (FirstInLoop && IgnoreEnterPress)
+        {
+            cin.ignore(1, '\n');
+            getline(cin >> ws, St);
+            return St;
+        }
+        if (FirstInLoop)
+        {
+            getline(cin >> ws, St);
+            return St;
+        }
+        if (IgnoreEnterPress)
+        {
+            cin.ignore(1, '\n');
+            getline(cin, St);
+        }
+        else
+        {
+            getline(cin, St);
+        }
+        return St;
+    }
+     
+    void PrintHello(string Text)
+    {
+        cout << "Hello, " << Text;
+    }
+     
+    int main()
+    {
+     
+        string Text = ReadString();
+        PrintHello(Text);
+        cout << "\n\n";
+        cin.get();
+        return 0;
+    }

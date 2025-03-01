@@ -1,0 +1,20 @@
+    #include <iostream>
+     
+    using namespace std;
+     
+    int main()
+    {
+        float Num;
+        cin >> Num;
+     
+        if (Num - int(Num) == 0)
+        {
+            cout << "int " << Num;
+        }
+        else
+        {
+            cout << "float " << (int)Num << " " << Num - int(Num);
+        }
+     
+        return 0;
+    }

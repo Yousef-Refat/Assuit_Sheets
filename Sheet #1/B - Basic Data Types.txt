@@ -1,0 +1,29 @@
+#include <iostream>
+    #include <string>
+     
+    using namespace std;
+     
+    int main()
+    {
+     
+        int X;
+        long long X2;
+        char Ch;
+        float F;
+        double D;
+     
+        cin >> X >> X2 >> Ch >> F >> D;
+     
+        cout << X << "\n"
+             << X2;
+     
+        cout << "\n";
+     
+        cout << Ch << "\n"
+             << F << "\n"
+             << D;
+     
+       
+        cin.get();
+        return 0;
+    }

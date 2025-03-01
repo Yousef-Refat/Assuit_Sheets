@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+long long FirstDigit(long long Number)
+{
+
+    return Number % 10;
+}
+
+int main()
+{
+    long long Num1, Num2;
+    cin >> Num1 >> Num2;
+
+    cout << FirstDigit(Num1) + FirstDigit(Num2);
+
+    return 0;
+}

@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float Num1, Num2;
+    char Ch;
+    cin >> Num1 >> Ch >> Num2;
+
+    switch (Ch)
+    {
+    case '>':
+        if (Num1 > Num2)
+        {
+            cout << "Right";
+        }
+        else
+        {
+            cout << "Wrong";
+        }
+        break;
+    case '=':
+        if (Num1 == Num2)
+        {
+            cout << "Right";
+        }
+        else
+        {
+            cout << "Wrong";
+        }
+        break;
+    case '<':
+        if (Num1 < Num2)
+        {
+            cout << "Right";
+        }
+        else
+        {
+            cout << "Wrong";
+        }
+        break;
+
+    default:
+        cout << "Eroooor";
+        break;
+    }
+
+    return 0;
+}

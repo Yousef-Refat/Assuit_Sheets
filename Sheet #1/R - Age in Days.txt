@@ -1,0 +1,31 @@
+    #include <iostream>
+    #include <cmath>
+     
+    using namespace std;
+     
+    void AgeFromDays(int Days)
+    {
+        int Years = 0;
+        int Months = 0;
+        while (Days >= 365)
+        {
+            Years++;
+            Days -= 365;
+        }
+        while (Days >= 30)
+        {
+            Months++;
+            Days -= 30;
+        }
+        cout << Years << " years\n";
+        cout << Months << " months\n";
+        cout << Days << " days\n";
+    }
+     
+    int main()
+    {
+        int Days;
+        cin >> Days;
+        AgeFromDays(Days);
+        return 0;
+    }

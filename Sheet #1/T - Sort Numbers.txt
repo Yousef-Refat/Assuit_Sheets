@@ -1,0 +1,77 @@
+#include <iostream>
+
+using namespace std;
+
+int MaxNumber(int Number1, int Number2, int Number3)
+{
+
+    int Arr[3] = {Number1, Number2, Number3};
+    int MaxNumber = Arr[0];
+    for (int i = 0; i <= 2; i++)
+    {
+        if (Arr[i] > MaxNumber)
+        {
+            MaxNumber = Arr[i];
+        }
+    }
+    return MaxNumber;
+}
+
+int MinNumber(int Number1, int Number2, int Number3)
+{
+    int Arr[3] = {Number1, Number2, Number3};
+    int MinNumber = Arr[0];
+    for (int i = 0; i <= 2; i++)
+    {
+        if (Arr[i] < MinNumber)
+        {
+            MinNumber = Arr[i];
+        }
+    }
+    return MinNumber;
+}
+
+int MiddleNumber(int Number1, int Number2, int Number3)
+{
+    if (Number1 != MaxNumber(Number1, Number2, Number3) && Number1 != MinNumber(Number1, Number2, Number3))
+    {
+        return Number1;
+    }
+    if (Number2 != MaxNumber(Number1, Number2, Number3) && Number2 != MinNumber(Number1, Number2, Number3))
+    {
+        return Number2;
+    }
+    if (Number3 != MaxNumber(Number1, Number2, Number3) && Number3 != MinNumber(Number1, Number2, Number3))
+    {
+        return Number3;
+    }
+    if (Number1 == Number2)
+    {
+        return Number1;
+    }
+    if (Number2 == Number3)
+    {
+        return Number2;
+    }
+    if (Number1 == Number3)
+    {
+        return Number3;
+    }
+    return 0;
+}
+
+int main()
+{
+    int Num1, Num2, Num3;
+    cin >> Num1 >> Num2 >> Num3;
+
+    cout << MinNumber(Num1, Num2, Num3) << "\n";
+    cout << MiddleNumber(Num1, Num2, Num3) << "\n";
+    cout << MaxNumber(Num1, Num2, Num3) << "\n\n";
+
+    cout << Num1 << "\n";
+    cout << Num2 << "\n";
+    cout << Num3 << "\n";
+
+    return 0;
+}
